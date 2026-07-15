@@ -1,6 +1,6 @@
 # COGNIZANT Deepskilling — Java Exercises
 
-A structured collection of Java exercises completed as part of the Cognizant Deepskilling programme, covering PL/SQL and Java testing with JUnit, Mockito, and SLF4J.
+A structured collection of Java exercises completed as part of the Cognizant Deepskilling programme, covering Algorithms & Data Structures, Design Patterns, PL/SQL, and Java Testing with JUnit, Mockito, and SLF4J.
 
 ---
 
@@ -8,6 +8,8 @@ A structured collection of Java exercises completed as part of the Cognizant Dee
 
 ```
 COGNIZANT_Deepskilling/
+├── Algorithms/
+├── DesignPatterns/
 ├── PL_SQL/
 └── JUnit, Mockito and SL4J/
     ├── JUnit_Basic Testing Exercises/
@@ -21,7 +23,76 @@ COGNIZANT_Deepskilling/
 
 ---
 
-## 🗄️ Module 1 — PL/SQL
+## 📊 Module 1 — Algorithms & Data Structures
+
+Hands-on exercises covering core data structures and algorithm fundamentals in plain Java.
+
+| # | Exercise | Key Concept | Data Structure / Algorithm |
+|---|----------|-------------|---------------------------|
+| 01 | Inventory Management | CRUD operations | HashMap |
+| 02 | E-commerce Search | Big O Notation | Linear Search, Binary Search |
+| 03 | Sorting Customer Orders | Sorting Algorithms | Bubble Sort, Quick Sort |
+| 04 | Employee Management | Arrays in Memory | Array |
+| 05 | Task Management | Linked Lists | Singly Linked List |
+| 06 | Library Management | Search Algorithms | Linear Search, Binary Search |
+| 07 | Financial Forecasting | Recursion & Memoization | Recursive Algorithm |
+
+**Run:**
+```bash
+cd Algorithms/01_InventoryManagement
+javac *.java
+java InventoryTest
+```
+
+### Big O Quick Reference
+
+| Complexity | Name | Example |
+|------------|------|---------|
+| O(1) | Constant | HashMap lookup |
+| O(log n) | Logarithmic | Binary Search |
+| O(n) | Linear | Linear Search, Array traversal |
+| O(n log n) | Linearithmic | Quick Sort (avg), Merge Sort |
+| O(n²) | Quadratic | Bubble Sort |
+
+---
+
+## 🧩 Module 2 — Design Patterns & Principles
+
+Practical implementation of GoF design patterns in Java.
+
+| # | Pattern | Category | Scenario |
+|---|---------|----------|----------|
+| 01 | Singleton | Creational | Logger with a single shared instance |
+| 02 | Factory Method | Creational | Document management (Word, PDF, Excel) |
+| 03 | Builder | Creational | Computer with optional configuration parts |
+| 04 | Adapter | Structural | Unified interface for multiple payment gateways |
+| 05 | Decorator | Structural | Multi-channel notification system |
+| 06 | Proxy | Structural | Lazy-loading image viewer with caching |
+| 07 | Observer | Behavioral | Stock market price alerts |
+| 08 | Strategy | Behavioral | Swappable payment methods at runtime |
+| 09 | Command | Behavioral | Home automation remote control |
+| 10 | MVC | Architectural | Student records management app |
+| 11 | Dependency Injection | Architectural | Customer service with injected repository |
+
+**Run:**
+```bash
+cd DesignPatterns/01_SingletonPattern
+javac *.java
+java SingletonTest
+```
+
+### Pattern Categories
+
+| Category | Description |
+|----------|-------------|
+| **Creational** | Object creation mechanisms for flexibility and reuse |
+| **Structural** | Object composition to form larger structures |
+| **Behavioral** | Communication and responsibility between objects |
+| **Architectural** | High-level application-level organisation strategies |
+
+---
+
+## 🗄️ Module 3 — PL/SQL
 
 Hands-on Oracle PL/SQL exercises covering core database programming constructs.
 
@@ -41,11 +112,11 @@ Hands-on Oracle PL/SQL exercises covering core database programming constructs.
 
 ---
 
-## 🧪 Module 2 — JUnit, Mockito & SLF4J
+## 🧪 Module 4 — JUnit, Mockito & SLF4J
 
 Seven Maven projects covering Java unit testing, mocking, Spring Boot testing, and logging.
 
-### 1. JUnit Basic Testing Exercises
+### 4.1 JUnit Basic Testing Exercises
 
 Introduces JUnit 5 fundamentals across four exercises.
 
@@ -63,7 +134,7 @@ mvn test
 
 ---
 
-### 2. JUnit Advanced Testing
+### 4.2 JUnit Advanced Testing
 
 Advanced JUnit 5 features in a single Maven project.
 
@@ -82,7 +153,7 @@ mvn test
 
 ---
 
-### 3. Mockito
+### 4.3 Mockito
 
 Core Mockito concepts — each exercise is a self-contained sub-project.
 
@@ -103,7 +174,7 @@ mvn test
 
 ---
 
-### 4. Mockito Advanced
+### 4.4 Mockito Advanced
 
 Advanced Mockito patterns — mocking real-world dependencies.
 
@@ -122,7 +193,7 @@ mvn test
 
 ---
 
-### 5. JUnit Spring Test
+### 4.5 JUnit Spring Test
 
 Spring Boot testing with 9 exercises in a single Maven project (Spring Boot 3.2 + H2).
 
@@ -145,9 +216,9 @@ mvn test
 
 ---
 
-### 6. Mockito Mock Dependencies
+### 4.6 Mockito Mock Dependencies
 
-Spring Boot project demonstrating the three key Mockito integration strategies.
+Spring Boot project demonstrating three key Mockito integration strategies.
 
 | Test Class | Topic |
 |------------|-------|
@@ -162,7 +233,7 @@ mvn test
 
 ---
 
-### 7. SLF4J Logging
+### 4.7 SLF4J Logging
 
 Standalone Maven project using SLF4J 2.0 + Logback 1.5.
 
@@ -204,7 +275,11 @@ mvn compile exec:java
 # Clone the repo
 git clone https://github.com/shreyashkumarsingh/COGNIZANT_Deepskilling.git
 
-# Navigate to any Maven module and run tests
+# Run any plain Java exercise
+cd Algorithms/01_InventoryManagement
+javac *.java && java InventoryTest
+
+# Run any Maven-based test module
 cd "JUnit, Mockito and SL4J/JUnit_Basic Testing Exercises/Exercise-1-Setting-Up-JUnit"
 mvn test
 ```
