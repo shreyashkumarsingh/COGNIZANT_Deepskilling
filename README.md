@@ -1,80 +1,210 @@
-# Java Exercises Collection
+# COGNIZANT Deepskilling — Java Exercises
 
-This repository combines hands-on Java exercises covering both data structures and algorithms and design patterns and principles.
-
----
-
-## Algorithms & Data Structures
-
-| # | Exercise | Key Concept | Data Structure / Algorithm |
-|---|----------|-------------|---------------------------|
-| 01 | [Inventory Management](./01_InventoryManagement/) | CRUD operations | HashMap |
-| 02 | [E-commerce Search](./02_EcommerceSearch/) | Big O Notation | Linear Search, Binary Search |
-| 03 | [Sorting Customer Orders](./03_SortingOrders/) | Sorting Algorithms | Bubble Sort, Quick Sort |
-| 04 | [Employee Management](./04_EmployeeManagement/) | Arrays in Memory | Array |
-| 05 | [Task Management](./05_TaskManagement/) | Linked Lists | Singly Linked List |
-| 06 | [Library Management](./06_LibraryManagement/) | Search Algorithms | Linear Search, Binary Search |
-| 07 | [Financial Forecasting](./07_FinancialForecasting/) | Recursion & Memoization | Recursive Algorithm |
-
-## Design Patterns & Principles
-
-| # | Pattern | Category | Scenario |
-|---|---------|----------|----------|
-| 01 | [Singleton](./01_SingletonPattern/) | Creational | Logger with a single shared instance |
-| 02 | [Factory Method](./02_FactoryMethodPattern/) | Creational | Document management (Word, PDF, Excel) |
-| 03 | [Builder](./03_BuilderPattern/) | Creational | Computer with optional configuration parts |
-| 04 | [Adapter](./04_AdapterPattern/) | Structural | Unified interface for multiple payment gateways |
-| 05 | [Decorator](./05_DecoratorPattern/) | Structural | Multi-channel notification system |
-| 06 | [Proxy](./06_ProxyPattern/) | Structural | Lazy-loading image viewer with caching |
-| 07 | [Observer](./07_ObserverPattern/) | Behavioral | Stock market price alerts |
-| 08 | [Strategy](./08_StrategyPattern/) | Behavioral | Swappable payment methods at runtime |
-| 09 | [Command](./09_CommandPattern/) | Behavioral | Home automation remote control |
-| 10 | [MVC](./10_MVCPattern/) | Architectural | Student records management app |
-| 11 | [Dependency Injection](./11_DependencyInjection/) | Architectural | Customer service with injected repository |
+A structured collection of Java exercises completed as part of the Cognizant Deepskilling programme, covering PL/SQL and Java testing with JUnit, Mockito, and SLF4J.
 
 ---
 
-## How to Run Any Exercise
+## 📁 Repository Structure
 
-Each exercise is self-contained. Navigate into the folder, compile all `.java` files, and run the test class:
-
-```bash
-cd 01_InventoryManagement
-javac *.java
-java InventoryTest
+```
+COGNIZANT_Deepskilling/
+├── PL_SQL/
+└── JUnit, Mockito and SL4J/
+    ├── JUnit_Basic Testing Exercises/
+    ├── JUnit_Advanced Testing/
+    ├── JUnit_Spring Test/
+    ├── Mockito/
+    ├── Mockito_Advanced/
+    ├── Mockito_Mock Dependencies/
+    └── SLF4J Logging/
 ```
 
-Replace the folder name and test class name as needed. Every folder has its own `README.md` with the exact commands and expected output.
+---
+
+## 🗄️ Module 1 — PL/SQL
+
+Hands-on Oracle PL/SQL exercises covering core database programming constructs.
+
+| File | Topic |
+|------|-------|
+| `00_schema.sql` | Schema Setup |
+| `01_sample_data.sql` | Sample Data Insertion |
+| `02_exercise1_control_structures.sql` | IF/ELSE, LOOP, WHILE, FOR |
+| `03_exercise2_error_handling.sql` | EXCEPTION blocks, SQLCODE, SQLERRM |
+| `04_exercise3_stored_procedures.sql` | CREATE PROCEDURE, IN/OUT parameters |
+| `05_exercise4_functions.sql` | CREATE FUNCTION, RETURN values |
+| `06_exercise5_triggers.sql` | BEFORE/AFTER DML Triggers |
+| `07_exercise6_cursors.sql` | Explicit Cursors, FETCH, LOOP |
+| `08_exercise7_packages.sql` | PACKAGE SPEC & BODY |
+
+**Run:** Execute scripts in order (00 → 08) in SQL*Plus or Oracle SQL Developer.
 
 ---
 
-## Requirements
+## 🧪 Module 2 — JUnit, Mockito & SLF4J
 
-- Java 8 or higher
-- No external dependencies - pure Java
+Seven Maven projects covering Java unit testing, mocking, Spring Boot testing, and logging.
+
+### 1. JUnit Basic Testing Exercises
+
+Introduces JUnit 5 fundamentals across four exercises.
+
+| Exercise | Topic |
+|----------|-------|
+| Exercise-1-Setting-Up-JUnit | Maven + JUnit 5 project setup, first test |
+| Exercise-2-Basic-JUnit-Tests | `assertEquals` on Calculator operations |
+| Exercise-3-Assertions | All core assertion methods |
+| Exercise-4-AAA-Pattern | `@BeforeEach`, `@AfterEach`, Arrange-Act-Assert |
+
+```bash
+cd "JUnit, Mockito and SL4J/JUnit_Basic Testing Exercises/Exercise-1-Setting-Up-JUnit"
+mvn test
+```
 
 ---
 
-## Big O Quick Reference
+### 2. JUnit Advanced Testing
 
-| Complexity | Name | Example |
-|------------|------|---------|
-| O(1) | Constant | HashMap lookup |
-| O(log n) | Logarithmic | Binary Search |
-| O(n) | Linear | Linear Search, Array traversal |
-| O(n log n) | Linearithmic | Quick Sort (avg), Merge Sort |
-| O(n²) | Quadratic | Bubble Sort |
+Advanced JUnit 5 features in a single Maven project.
 
-## Pattern Categories
+| Exercise | Topic |
+|----------|-------|
+| Exercise-1-Parameterized-Tests | `@ParameterizedTest`, `@ValueSource` |
+| Exercise-2-Test-Suites | `@Suite`, `@SelectClasses` |
+| Exercise-3-Test-Execution-Order | `@TestMethodOrder`, `@Order` |
+| Exercise-4-Exception-Testing | `assertThrows()` |
+| Exercise-5-Timeout-Performance-Testing | `assertTimeout()` |
 
-### Creational
-Deal with object creation mechanisms, aiming to create objects in a manner suitable to the situation.
+```bash
+cd "JUnit, Mockito and SL4J/JUnit_Advanced Testing"
+mvn test
+```
 
-### Structural
-Deal with object composition, creating relationships between objects to form larger structures.
+---
 
-### Behavioral
-Deal with communication between objects, defining how they interact and distribute responsibility.
+### 3. Mockito
 
-### Architectural
-High-level strategies for organising code at the application level.
+Core Mockito concepts — each exercise is a self-contained sub-project.
+
+| Exercise | Topic |
+|----------|-------|
+| Exercise-1-Mocking-and-Stubbing | `mock()`, `when().thenReturn()` |
+| Exercise-2-Verifying-Interactions | `verify()` |
+| Exercise-3-Argument-Matching | `anyInt()`, `ArgumentMatchers` |
+| Exercise-4-Handling-Void-Methods | `doNothing()` on void methods |
+| Exercise-5-Multiple-Return-Values | Chained `thenReturn()` |
+| Exercise-6-Verifying-Interaction-Order | `InOrder` |
+| Exercise-7-Void-Methods-With-Exceptions | `doThrow()` |
+
+```bash
+cd "JUnit, Mockito and SL4J/Mockito"
+mvn test
+```
+
+---
+
+### 4. Mockito Advanced
+
+Advanced Mockito patterns — mocking real-world dependencies.
+
+| Exercise | Topic |
+|----------|-------|
+| Exercise-1-Mocking-Repository | Mock database repository layer |
+| Exercise-2-Mocking-REST-API | Mock HTTP REST client |
+| Exercise-3-Mocking-File-IO | Mock File Reader/Writer via interfaces |
+| Exercise-4-Mocking-Network | Mock network connection |
+| Exercise-5-Multiple-Return-Values | Consecutive return values |
+
+```bash
+cd "JUnit, Mockito and SL4J/Mockito_Advanced"
+mvn test
+```
+
+---
+
+### 5. JUnit Spring Test
+
+Spring Boot testing with 9 exercises in a single Maven project (Spring Boot 3.2 + H2).
+
+| Test Class | Topic |
+|------------|-------|
+| `CalculatorServiceTest` | `@SpringBootTest` + `@Autowired` |
+| `UserServiceTest` | `@Mock` + `@InjectMocks` |
+| `UserControllerTest` | `@WebMvcTest` + `MockMvc` GET |
+| `IntegrationTest` | `@AutoConfigureMockMvc` integration test |
+| `CreateUserControllerTest` | `MockMvc` POST + `ObjectMapper` |
+| `UserServiceExceptionTest` | `assertNull` on empty `Optional` |
+| `RepositoryTest` | `@DataJpaTest` + H2 |
+| `GlobalExceptionHandlerTest` | `@ControllerAdvice` 404 response |
+| `ParameterizedCalculatorTest` | `@CsvSource` parameterized test |
+
+```bash
+cd "JUnit, Mockito and SL4J/JUnit_Spring Test"
+mvn test
+```
+
+---
+
+### 6. Mockito Mock Dependencies
+
+Spring Boot project demonstrating the three key Mockito integration strategies.
+
+| Test Class | Topic |
+|------------|-------|
+| `UserControllerTest` | `@WebMvcTest` + `@MockBean` on service |
+| `UserServiceTest` | `@Mock` + `@InjectMocks` on repository |
+| `UserIntegrationTest` | `@SpringBootTest` + `@MockBean` |
+
+```bash
+cd "JUnit, Mockito and SL4J/Mockito_Mock Dependencies"
+mvn test
+```
+
+---
+
+### 7. SLF4J Logging
+
+Standalone Maven project using SLF4J 2.0 + Logback 1.5.
+
+| Class | Topic |
+|-------|-------|
+| `LoggingExample` | `logger.error()` and `logger.warn()` |
+| `ParameterizedLogging` | `{}` placeholder substitution |
+| `AppenderLogging` | Console + File appenders via `logback.xml` |
+
+```bash
+cd "JUnit, Mockito and SL4J/SLF4J Logging"
+mvn compile exec:java
+```
+
+> To switch exercises, update `<mainClass>` in `pom.xml`.
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology | Version |
+|------------|---------|
+| Java | 17 |
+| Maven | 3.x |
+| JUnit Jupiter | 5.10.2 |
+| Mockito | 5.12.0 |
+| Spring Boot | 3.2.5 |
+| H2 Database | Runtime |
+| SLF4J API | 2.0.13 |
+| Logback Classic | 1.5.6 |
+
+---
+
+## 🚀 Getting Started
+
+**Prerequisites:** Java 17+, Maven 3.x installed.
+
+```bash
+# Clone the repo
+git clone https://github.com/shreyashkumarsingh/COGNIZANT_Deepskilling.git
+
+# Navigate to any Maven module and run tests
+cd "JUnit, Mockito and SL4J/JUnit_Basic Testing Exercises/Exercise-1-Setting-Up-JUnit"
+mvn test
+```
