@@ -15,6 +15,8 @@ COGNIZANT_Deepskilling/
 ├── Spring Core and Maven/
 │   ├── LibraryManagement/             ← Exercises 1–8 (Spring Core + AOP + XML config)
 │   └── LibraryManagement-SpringBoot/  ← Exercise 9  (Spring Boot REST API)
+├── Spring Data JPA with Hibernate/
+│   └── orm-learn/                     ← Tasks 1 & 2 Hands-on (ORM, Query Methods, Relationships)
 └── JUnit, Mockito and SL4J/
     ├── JUnit_Basic Testing Exercises/
     ├── JUnit_Advanced Testing/
