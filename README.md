@@ -1,6 +1,6 @@
-# COGNIZANT Deepskilling — Java Exercises
+# COGNIZANT Deepskilling — Full Stack & Software Engineering Exercises
 
-A structured collection of Java exercises completed as part of the Cognizant Deepskilling programme, covering Algorithms & Data Structures, Design Patterns, PL/SQL, Spring Core, Maven, Spring Boot, and Java Testing with JUnit, Mockito, and SLF4J.
+A structured collection of hands-on exercises completed as part of the Cognizant Digital Nurture 5.0 Deepskilling Programme, covering Java Fundamentals, Algorithms, Design Patterns, PL/SQL, Spring Core, Spring Boot, Spring Data JPA, Spring REST, Spring Cloud Microservices, Angular (v20), React, Git, and Java Unit Testing with JUnit 5, Mockito, and SLF4J.
 
 ---
 
@@ -8,30 +8,45 @@ A structured collection of Java exercises completed as part of the Cognizant Dee
 
 ```
 COGNIZANT_Deepskilling/
-├── Engineering concepts/
-│   ├── Algorithms/
-│   └── DesignPatterns/
-├── PL_SQL/
-├── Spring Core and Maven/
-│   ├── LibraryManagement/             ← Exercises 1–8 (Spring Core + AOP + XML config)
-│   └── LibraryManagement-SpringBoot/  ← Exercise 9  (Spring Boot REST API)
-├── Spring Data JPA with Hibernate/
-│   └── orm-learn/                     ← Tasks 1 & 2 Hands-on (ORM, Query Methods, Relationships)
-├── Spring REST using Spring Boot/
-│   └── spring-learn/                  ← Tasks 1 to 5 Hands-on (Spring Core, REST API, Validation, Security & JWT)
-└── JUnit, Mockito and SL4J/
-    ├── JUnit_Basic Testing Exercises/
-    ├── JUnit_Advanced Testing/
-    ├── JUnit_Spring Test/
-    ├── Mockito/
-    ├── Mockito_Advanced/
-    ├── Mockito_Mock Dependencies/
-    └── SLF4J Logging/
+├── Angular/                           ← Angular (v20.0) Student Course Portal (10 Exercises)
+│   └── student-course-portal/
+├── Engineering concepts/             ← Data Structures, Algorithms & GoF Design Patterns
+│   ├── Algorithms/                    ← 7 Core Algorithm Exercises
+│   └── DesignPatterns/                ← 11 GoF Design Pattern Implementations
+├── GIT/                               ← Git Client Configuration & Lab Exercises (Tasks 1-5)
+│   └── GitDemo/
+├── JUnit, Mockito and SL4J/           ← Java Testing & Mocking Suite (7 Maven Projects)
+│   ├── JUnit_Basic Testing Exercises/
+│   ├── JUnit_Advanced Testing/
+│   ├── JUnit_Spring Test/
+│   ├── Mockito/
+│   ├── Mockito_Advanced/
+│   ├── Mockito_Mock Dependencies/
+│   └── SLF4J Logging/
+├── Microservices/                     ← Spring Boot 3 & Spring Cloud Microservices Architecture
+│   ├── eureka-discovery-server/       ← Netflix Eureka Service Registry (Port 8761)
+│   ├── account/                       ← Account Microservice (Port 8080)
+│   ├── loan/                          ← Loan Microservice (Port 8081)
+│   ├── greet-service/                 ← Greet Microservice (Port 8083)
+│   ├── api-gateway/                   ← Spring Cloud Gateway (Port 9090)
+│   ├── auth-service/                  ← OAuth2 & JWT Security Server (Port 8082)
+│   ├── user-service/                  ← Reactive WebClient Service (Port 8084)
+│   └── order-service/                 ← Reactive WebClient Order Service (Port 8085)
+├── PL_SQL/                            ← Oracle PL/SQL Scripts (00 to 08)
+├── React/                             ← React SPA Hands-On Suite (Tasks 1 to 19)
+│   ├── myfirstreact/ ... gitclientapp/
+├── Spring Core and Maven/             ← Spring IoC, XML DI, AOP & Spring Boot REST API
+│   ├── LibraryManagement/
+│   └── LibraryManagement-SpringBoot/
+├── Spring Data JPA with Hibernate/    ← Spring Data JPA, DML, Query Methods & Relationships
+│   └── orm-learn/
+└── Spring REST using Spring Boot/     ← Spring REST, Web Validation, Security & JWT
+    └── spring-learn/
 ```
 
 ---
 
-## 📊 Module 1 — Algorithms & Data Structures
+## 📊 Module 1 — Engineering Concepts (Algorithms & Data Structures)
 
 Hands-on exercises covering core data structures and algorithm fundamentals in plain Java.
 
@@ -51,16 +66,6 @@ cd "Engineering concepts/Algorithms/01_InventoryManagement"
 javac *.java
 java InventoryTest
 ```
-
-### Big O Quick Reference
-
-| Complexity | Name | Example |
-|------------|------|---------|
-| O(1) | Constant | HashMap lookup |
-| O(log n) | Logarithmic | Binary Search |
-| O(n) | Linear | Linear Search, Array traversal |
-| O(n log n) | Linearithmic | Quick Sort (avg), Merge Sort |
-| O(n²) | Quadratic | Bubble Sort |
 
 ---
 
@@ -89,15 +94,6 @@ javac *.java
 java SingletonTest
 ```
 
-### Pattern Categories
-
-| Category | Description |
-|----------|-------------|
-| **Creational** | Object creation mechanisms for flexibility and reuse |
-| **Structural** | Object composition to form larger structures |
-| **Behavioral** | Communication and responsibility between objects |
-| **Architectural** | High-level application-level organisation strategies |
-
 ---
 
 ## 🗄️ Module 3 — PL/SQL
@@ -116,218 +112,128 @@ Hands-on Oracle PL/SQL exercises covering core database programming constructs.
 | `07_exercise6_cursors.sql` | Explicit Cursors, FETCH, LOOP |
 | `08_exercise7_packages.sql` | PACKAGE SPEC & BODY |
 
-**Run:** Execute scripts in order (00 → 08) in SQL*Plus or Oracle SQL Developer.
-
 ---
 
-## 🌱 Module 4 — Spring Core, Maven & Spring Boot
+## 🌱 Module 4 — Spring Core and Maven
 
-Two Maven projects covering the full Spring journey from XML-based IoC to Spring Boot REST APIs.
+Two Maven projects covering Spring IoC, XML bean configuration, Spring AOP, and Spring Boot REST APIs.
 
-### 4.1 LibraryManagement — Spring Core (Exercises 1–8)
-
-All eight exercises build on a single Maven project using Spring 5.x with XML configuration.
-
-| Exercise | Topic | Key Concepts |
-|----------|-------|-------------|
-| Exercise 1 | Configuring a Basic Spring Application | `ApplicationContext`, XML bean definitions |
-| Exercise 2 | Implementing Dependency Injection | Setter DI, `<property>` wiring |
-| Exercise 3 | Logging with Spring AOP | `@Around` advice, execution time tracking |
-| Exercise 4 | Creating & Configuring a Maven Project | `pom.xml`, Maven Compiler Plugin, Java 1.8 |
-| Exercise 5 | Configuring the Spring IoC Container | `ClassPathXmlApplicationContext`, bean lifecycle |
-| Exercise 6 | Configuring Beans with Annotations | `@Service`, `@Repository`, `<context:component-scan>` |
-| Exercise 7 | Constructor & Setter Injection | `<constructor-arg>`, `<property>` |
-| Exercise 8 | Implementing Basic AOP with Spring | `@Before`, `@After`, `<aop:aspectj-autoproxy/>` |
-
-**Project structure:**
-```
-LibraryManagement/
-├── pom.xml                                  ← Spring Context + AOP + WebMVC, Java 1.8
-└── src/main/
-    ├── java/com/library/
-    │   ├── LibraryManagementApplication.java
-    │   ├── aspect/LoggingAspect.java         ← @Before, @After, @Around
-    │   ├── repository/BookRepository.java    ← @Repository
-    │   └── service/BookService.java          ← @Service, constructor + setter DI
-    └── resources/applicationContext.xml      ← beans, DI, component-scan, AOP config
-```
-
-**Run:**
 ```bash
+# Spring Core (Exercises 1–8)
 cd "Spring Core and Maven/LibraryManagement"
 mvn compile exec:java -Dexec.mainClass="com.library.LibraryManagementApplication"
-```
 
----
-
-### 4.2 LibraryManagement-SpringBoot — Spring Boot (Exercise 9)
-
-A standalone Spring Boot 3.x application with a full CRUD REST API backed by an H2 in-memory database.
-
-| Component | Description |
-|-----------|-------------|
-| `Book.java` | JPA Entity — `id`, `title`, `author` |
-| `BookRepository.java` | `JpaRepository<Book, Long>` |
-| `BookController.java` | REST endpoints — GET, POST, PUT, DELETE `/books` |
-| `application.properties` | H2 in-memory datasource, DDL auto, H2 console |
-
-**REST Endpoints:**
-
-| Method | URL | Description |
-|--------|-----|-------------|
-| `GET` | `/books` | Retrieve all books |
-| `GET` | `/books/{id}` | Retrieve book by ID |
-| `POST` | `/books` | Create a new book |
-| `PUT` | `/books/{id}` | Update an existing book |
-| `DELETE` | `/books/{id}` | Delete a book |
-
-**Run:**
-```bash
+# Spring Boot REST API (Exercise 9)
 cd "Spring Core and Maven/LibraryManagement-SpringBoot"
 mvn spring-boot:run
 ```
 
-> H2 Console available at `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:librarydb`)
-
 ---
 
-## 🧪 Module 5 — JUnit, Mockito & SLF4J
+## 🍃 Module 5 — Spring Data JPA with Hibernate
 
-Seven Maven projects covering Java unit testing, mocking, Spring Boot testing, and logging.
-
-### 5.1 JUnit Basic Testing Exercises
-
-Introduces JUnit 5 fundamentals across four exercises.
-
-| Exercise | Topic |
-|----------|-------|
-| Exercise-1-Setting-Up-JUnit | Maven + JUnit 5 project setup, first test |
-| Exercise-2-Basic-JUnit-Tests | `assertEquals` on Calculator operations |
-| Exercise-3-Assertions | All core assertion methods |
-| Exercise-4-AAA-Pattern | `@BeforeEach`, `@AfterEach`, Arrange-Act-Assert |
+`orm-learn` Maven application implementing Spring Data JPA DML operations, custom Query Methods, and entity relationships (`@ManyToOne`, `@OneToMany`, `@ManyToMany`).
 
 ```bash
-cd "JUnit, Mockito and SL4J/JUnit_Basic Testing Exercises/Exercise-1-Setting-Up-JUnit"
-mvn test
+cd "Spring Data JPA with Hibernate/orm-learn"
+mvn spring-boot:run
 ```
 
 ---
 
-### 5.2 JUnit Advanced Testing
+## 🌐 Module 6 — Spring REST using Spring Boot
 
-Advanced JUnit 5 features in a single Maven project.
-
-| Exercise | Topic |
-|----------|-------|
-| Exercise-1-Parameterized-Tests | `@ParameterizedTest`, `@ValueSource` |
-| Exercise-2-Test-Suites | `@Suite`, `@SelectClasses` |
-| Exercise-3-Test-Execution-Order | `@TestMethodOrder`, `@Order` |
-| Exercise-4-Exception-Testing | `assertThrows()` |
-| Exercise-5-Timeout-Performance-Testing | `assertTimeout()` |
+`spring-learn` Maven application covering Spring Boot Web, XML bean loading, validation (`@Valid`), `@ControllerAdvice` global exception handling, Spring Security, and JWT token authentication.
 
 ```bash
-cd "JUnit, Mockito and SL4J/JUnit_Advanced Testing"
-mvn test
+cd "Spring REST using Spring Boot/spring-learn"
+mvn spring-boot:run
 ```
 
 ---
 
-### 5.3 Mockito
+## 🏗️ Module 7 — Microservices (Spring Boot 3 & Spring Cloud)
 
-Core Mockito concepts — each exercise is a self-contained sub-project.
+A complete 8-module microservice ecosystem featuring Netflix Eureka Service Discovery, Spring Cloud Gateway, Dynamic Load Balancing, Resilience4j Circuit Breakers, WebFlux `WebClient`, and OAuth2/JWT Security Server.
 
-| Exercise | Topic |
-|----------|-------|
-| Exercise-1-Mocking-and-Stubbing | `mock()`, `when().thenReturn()` |
-| Exercise-2-Verifying-Interactions | `verify()` |
-| Exercise-3-Argument-Matching | `anyInt()`, `ArgumentMatchers` |
-| Exercise-4-Handling-Void-Methods | `doNothing()` on void methods |
-| Exercise-5-Multiple-Return-Values | Chained `thenReturn()` |
-| Exercise-6-Verifying-Interaction-Order | `InOrder` |
-| Exercise-7-Void-Methods-With-Exceptions | `doThrow()` |
+| Service Module | Port | Architecture Role |
+| :--- | :--- | :--- |
+| `eureka-discovery-server` | `8761` | Netflix Eureka Service Registry |
+| `api-gateway` | `9090` | Edge Routing, Custom Logging Filter, Circuit Breaker Fallbacks |
+| `account` | `8080` | Account Service registered with Eureka |
+| `loan` | `8081` | Loan Service registered with Eureka |
+| `greet-service` | `8083` | Service registered with Eureka |
+| `auth-service` | `8082` | OAuth2 & JWT Security Server |
+| `user-service` | `8084` | Inter-service communications via WebFlux `WebClient` |
+| `order-service` | `8085` | Inter-service reactive client |
 
 ```bash
-cd "JUnit, Mockito and SL4J/Mockito"
-mvn test
+cd Microservices
+mvn clean package
 ```
 
 ---
 
-### 5.4 Mockito Advanced
+## 🅰️ Module 8 — Angular (v20.0) Student Course Portal
 
-Advanced Mockito patterns — mocking real-world dependencies.
-
-| Exercise | Topic |
-|----------|-------|
-| Exercise-1-Mocking-Repository | Mock database repository layer |
-| Exercise-2-Mocking-REST-API | Mock HTTP REST client |
-| Exercise-3-Mocking-File-IO | Mock File Reader/Writer via interfaces |
-| Exercise-4-Mocking-Network | Mock network connection |
-| Exercise-5-Multiple-Return-Values | Consecutive return values |
+A single, feature-rich Angular v20 Web Application (`student-course-portal`) covering 10 Hands-On Exercises:
+- Standalone components, dynamic routing, route guards (`AuthGuard`, `AdminGuard`).
+- Reactive forms, custom validators, pipes (`FilterPipe`, `CurrencyFormatterPipe`), directives (`HighlightDirective`).
+- Service layer, HTTP interceptors (`AuthInterceptor`, `LoggingInterceptor`, `ErrorInterceptor`).
+- NgRx Store (`actions`, `reducers`, `selectors`, `effects`) & Jasmine test suite (25/25 passing).
 
 ```bash
-cd "JUnit, Mockito and SL4J/Mockito_Advanced"
-mvn test
+cd "Angular/student-course-portal"
+npm start
+npm test
 ```
 
 ---
 
-### 5.5 JUnit Spring Test
+## ⚛️ Module 9 — React Hands-On Suite (Tasks 1 to 19)
 
-Spring Boot testing with 9 exercises in a single Maven project (Spring Boot 3.2 + H2).
+A suite of 19 React projects covering SPA fundamentals, React Router v6, Context API (`ThemeContext`), ES6 features, controlled forms, validation, REST API fetching, and Jest unit tests with Axios mocking.
 
-| Test Class | Topic |
-|------------|-------|
-| `CalculatorServiceTest` | `@SpringBootTest` + `@Autowired` |
-| `UserServiceTest` | `@Mock` + `@InjectMocks` |
-| `UserControllerTest` | `@WebMvcTest` + `MockMvc` GET |
-| `IntegrationTest` | `@AutoConfigureMockMvc` integration test |
-| `CreateUserControllerTest` | `MockMvc` POST + `ObjectMapper` |
-| `UserServiceExceptionTest` | `assertNull` on empty `Optional` |
-| `RepositoryTest` | `@DataJpaTest` + H2 |
-| `GlobalExceptionHandlerTest` | `@ControllerAdvice` 404 response |
-| `ParameterizedCalculatorTest` | `@CsvSource` parameterized test |
-
-```bash
-cd "JUnit, Mockito and SL4J/JUnit_Spring Test"
-mvn test
-```
-
----
-
-### 5.6 Mockito Mock Dependencies
-
-Spring Boot project demonstrating three key Mockito integration strategies.
-
-| Test Class | Topic |
-|------------|-------|
-| `UserControllerTest` | `@WebMvcTest` + `@MockBean` on service |
-| `UserServiceTest` | `@Mock` + `@InjectMocks` on repository |
-| `UserIntegrationTest` | `@SpringBootTest` + `@MockBean` |
-
-```bash
-cd "JUnit, Mockito and SL4J/Mockito_Mock Dependencies"
-mvn test
-```
+| Directory | Key Tech / Features |
+| :--- | :--- |
+| `myfirstreact` | Functional Component & `createRoot` |
+| `StudentApp` | Class Components for Portal Pages |
+| `scorecalculatorapp` | Props & Stylesheets |
+| `blogapp` | REST API Fetch & Error Boundary |
+| `cohortsdashboard` | CSS Modules & Dynamic Status Styling |
+| `TrainersApp` | React Router v6 (`useParams`, `Routes`) |
+| `shoppingapp` | Shopping Cart Item Management |
+| `counterapp` | Entry/Exit Visitor Counter |
+| `cricketapp` | ES6 Map, Filter, Destructuring, Spread |
+| `officespacerentalapp` | Dynamic Inline Rental Formatting |
+| `eventexamplesapp` | Synthetic Events & Currency Converter |
+| `ticketbookingapp` | Conditional User Rendering |
+| `bloggerapp` | Multi-pattern Conditional Rendering |
+| `employeethemeapp` | React Context API Theme Provider |
+| `ticketraisingapp` | Controlled Complaint Form |
+| `mailregisterapp` | Form Input Validation |
+| `fetchuserapp` | Random Profile REST Fetcher |
+| `cohortdetailsapp_testing` | Jest & React Testing Library |
+| `gitclientapp` | GitHub Search API & Jest Axios Mocking |
 
 ---
 
-### 5.7 SLF4J Logging
+## 🛠️ Module 10 — Git Lab Exercises (Tasks 1 to 5)
 
-Standalone Maven project using SLF4J 2.0 + Logback 1.5.
+Complete Git workflow hands-on covering `git init`, user level configuration, Notepad++ integration, branch management, merge conflicts resolution, and commit histories.
 
-| Class | Topic |
-|-------|-------|
-| `LoggingExample` | `logger.error()` and `logger.warn()` |
-| `ParameterizedLogging` | `{}` placeholder substitution |
-| `AppenderLogging` | Console + File appenders via `logback.xml` |
+---
 
-```bash
-cd "JUnit, Mockito and SL4J/SLF4J Logging"
-mvn compile exec:java
-```
+## 🧪 Module 11 — JUnit, Mockito & SLF4J Testing Suite
 
-> To switch exercises, update `<mainClass>` in `pom.xml`.
+Seven Maven projects covering Java unit testing, mocking, Spring Boot testing, and logging:
+- `JUnit_Basic Testing Exercises`
+- `JUnit_Advanced Testing`
+- `Mockito`
+- `Mockito_Advanced`
+- `JUnit_Spring Test`
+- `Mockito_Mock Dependencies`
+- `SLF4J Logging`
 
 ---
 
@@ -335,37 +241,13 @@ mvn compile exec:java
 
 | Technology | Version |
 |------------|---------|
-| Java (Core exercises) | 8 |
-| Java (Spring Boot) | 17 |
-| Maven | 3.x |
-| Spring Framework | 5.3.39 |
-| Spring Boot | 3.2.5 |
-| AspectJ Weaver | 1.9.22 |
-| H2 Database | Runtime |
-| JUnit Jupiter | 5.10.2 |
-| Mockito | 5.12.0 |
-| SLF4J API | 2.0.13 |
-| Logback Classic | 1.5.6 |
-
----
-
-## 🚀 Getting Started
-
-**Prerequisites:** Java 8+ (Java 17 for Spring Boot), Maven 3.x installed.
-
-```bash
-# Clone the repo
-git clone https://github.com/shreyashkumarsingh/COGNIZANT_Deepskilling.git
-
-# Run Spring Core exercises (1-8)
-cd "Spring Core, Maven & Spring Boot/LibraryManagement"
-mvn compile exec:java -Dexec.mainClass="com.library.LibraryManagementApplication"
-
-# Run Spring Boot REST API (exercise 9)
-cd "Spring Core, Maven & Spring Boot/LibraryManagement-SpringBoot"
-mvn spring-boot:run
-
-# Run JUnit tests
-cd "JUnit, Mockito and SL4J/JUnit_Basic Testing Exercises/Exercise-1-Setting-Up-JUnit"
-mvn test
-```
+| Java | 8 / 17 / 20 |
+| Node.js | v24.4.0 |
+| npm | 11.4.2 |
+| Spring Boot | 3.2.5 / 3.4.1 |
+| Spring Cloud | 2023.0.1 |
+| Angular CLI | 20.3.32 |
+| React | 18.x |
+| Maven | 3.9.1 |
+| H2 Database / MySQL | Embedded / 8.0 |
+| JUnit / Mockito | 5.10.2 / 5.12.0 |
