@@ -1,0 +1,67 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Data Structures & Algorithms",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Web Development with Angular",
+      "code": "CS202",
+      "credits": 3,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": 3,
+      "name": "Database Systems",
+      "code": "CS303",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 4,
+      "name": "Software Engineering",
+      "code": "CS404",
+      "credits": 4,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 5,
+      "name": "Operating Systems Principles",
+      "code": "CS505",
+      "credits": 3,
+      "gradeStatus": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Alex Johnson",
+      "email": "alex.johnson@university.edu",
+      "enrolledCourseIds": [1, 3]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@university.edu",
+      "enrolledCourseIds": [2]
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "courseId": 1,
+      "semester": "Odd"
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "courseId": 3,
+      "semester": "Even"
+    }
+  ]
+}

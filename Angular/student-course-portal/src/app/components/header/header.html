@@ -1,0 +1,15 @@
+<header class="portal-header">
+  <div class="header-container">
+    <div class="logo">
+      <span class="portal-icon">🎓</span>
+      <h2>{{ portalName }}</h2>
+    </div>
+    <nav class="main-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/courses" routerLinkActive="active">Courses</a>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      <a routerLink="/enroll" routerLinkActive="active">Enroll (TD)</a>
+      <a routerLink="/enroll-reactive" routerLinkActive="active">Enroll (Reactive)</a>
+    </nav>
+  </div>
+</header>

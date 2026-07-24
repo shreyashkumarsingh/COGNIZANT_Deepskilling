@@ -1,0 +1,41 @@
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="avatar">👨‍🎓</div>
+      <div>
+        <h2>{{ studentName }}</h2>
+        <p class="subtitle">ID: {{ studentId }} | {{ email }}</p>
+      </div>
+    </div>
+
+    <div class="profile-stats">
+      <div class="stat">
+        <label>Cumulative GPA:</label>
+        <span>{{ gpa }}</span>
+      </div>
+      <div class="stat">
+        <label>Active Enrollments:</label>
+        <span>{{ enrolledCourses.length }} Courses</span>
+      </div>
+    </div>
+
+    <h3>Enrolled Courses Roster</h3>
+    <div *ngIf="enrolledCourses.length > 0; else noEnrolled" class="enrolled-list">
+      <div *ngFor="let course of enrolledCourses" class="enrolled-item">
+        <div>
+          <h4>{{ course.name }} ({{ course.code }})</h4>
+          <span class="credits">{{ course.credits | creditLabel }}</span>
+        </div>
+        <span class="status-badge" [ngClass]="'status-' + course.gradeStatus">
+          {{ course.gradeStatus | uppercase }}
+        </span>
+      </div>
+    </div>
+
+    <ng-template #noEnrolled>
+      <p class="empty-text">No courses currently enrolled.</p>
+    </ng-template>
+  </div>
+
+  <app-notification></app-notification>
+</div>

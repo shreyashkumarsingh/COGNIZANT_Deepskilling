@@ -1,0 +1,12 @@
+<div class="app-shell">
+  <app-header></app-header>
+
+  <!-- Global Loading Spinner Interceptor Binding (Hands-On 8 Task 3) -->
+  <div *ngIf="loadingService.isLoading$ | async" class="global-loading-bar">
+    <div class="loading-progress"></div>
+  </div>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,40 @@
+<div class="detail-container">
+  <button type="button" class="btn-back" (click)="goBack()">← Back to Courses</button>
+
+  <div *ngIf="errorMessage" class="error-box">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="course" class="course-detail-card">
+    <div class="detail-header">
+      <span class="code-badge">{{ course.code }}</span>
+      <h2>{{ course.name }}</h2>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-item">
+        <label>Course ID:</label>
+        <span>{{ course.id }}</span>
+      </div>
+      <div class="detail-item">
+        <label>Credits:</label>
+        <span>{{ course.credits | creditLabel }}</span>
+      </div>
+      <div class="detail-item">
+        <label>Grade Status:</label>
+        <span class="status-tag" [ngClass]="'status-' + course.gradeStatus">
+          {{ course.gradeStatus | uppercase }}
+        </span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="students-section">
+      <h3>Enrolled Class Roster</h3>
+      <ul *ngIf="(enrolledStudents$ | async) as students">
+        <li *ngFor="let s of students">{{ s }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

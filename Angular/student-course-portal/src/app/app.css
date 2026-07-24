@@ -1,0 +1,32 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+.global-loading-bar {
+  height: 4px;
+  width: 100%;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-progress {
+  height: 100%;
+  background-color: #2563eb;
+  animation: loadingAnim 1.5s infinite ease-in-out;
+}
+
+@keyframes loadingAnim {
+  0% { left: -35%; width: 35%; position: absolute; }
+  60% { left: 100%; width: 100%; position: absolute; }
+  100% { left: 100%; width: 100%; position: absolute; }
+}
