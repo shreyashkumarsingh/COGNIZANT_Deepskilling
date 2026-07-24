@@ -8,8 +8,9 @@ A structured collection of Java exercises completed as part of the Cognizant Dee
 
 ```
 COGNIZANT_Deepskilling/
-├── Algorithms/
-├── DesignPatterns/
+├── Engineering concepts/
+│   ├── Algorithms/
+│   └── DesignPatterns/
 ├── PL_SQL/
 ├── Spring Core_Maven/
 │   ├── LibraryManagement/             ← Exercises 1–8 (Spring Core + AOP + XML config)
@@ -42,7 +43,7 @@ Hands-on exercises covering core data structures and algorithm fundamentals in p
 
 **Run:**
 ```bash
-cd Algorithms/01_InventoryManagement
+cd "Engineering concepts/Algorithms/01_InventoryManagement"
 javac *.java
 java InventoryTest
 ```
@@ -79,7 +80,7 @@ Practical implementation of GoF design patterns in Java.
 
 **Run:**
 ```bash
-cd DesignPatterns/01_SingletonPattern
+cd "Engineering concepts/DesignPatterns/01_SingletonPattern"
 javac *.java
 java SingletonTest
 ```
