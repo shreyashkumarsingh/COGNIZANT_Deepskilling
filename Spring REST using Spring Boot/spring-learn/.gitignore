@@ -1,0 +1,8 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!target/classes
+!target/test-classes
+
+### Options.txt ###
+*.log
+.mvn/

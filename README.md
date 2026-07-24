@@ -17,6 +17,8 @@ COGNIZANT_Deepskilling/
 │   └── LibraryManagement-SpringBoot/  ← Exercise 9  (Spring Boot REST API)
 ├── Spring Data JPA with Hibernate/
 │   └── orm-learn/                     ← Tasks 1 & 2 Hands-on (ORM, Query Methods, Relationships)
+├── Spring REST using Spring Boot/
+│   └── spring-learn/                  ← Tasks 1 to 5 Hands-on (Spring Core, REST API, Validation, Security & JWT)
 └── JUnit, Mockito and SL4J/
     ├── JUnit_Basic Testing Exercises/
     ├── JUnit_Advanced Testing/

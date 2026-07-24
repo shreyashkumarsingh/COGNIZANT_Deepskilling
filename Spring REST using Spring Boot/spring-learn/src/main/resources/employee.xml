@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Departments -->
+    <bean id="deptIT" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Information Technology" />
+    </bean>
+
+    <bean id="deptHR" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="2" />
+        <property name="name" value="Human Resources" />
+    </bean>
+
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="deptIT" />
+                <ref bean="deptHR" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Skills -->
+    <bean id="skillJava" class="com.cognizant.springlearn.model.Skill">
+        <property name="id" value="1" />
+        <property name="name" value="Java" />
+    </bean>
+
+    <bean id="skillSpring" class="com.cognizant.springlearn.model.Skill">
+        <property name="id" value="2" />
+        <property name="name" value="Spring Boot" />
+    </bean>
+
+    <bean id="skillReact" class="com.cognizant.springlearn.model.Skill">
+        <property name="id" value="3" />
+        <property name="name" value="React" />
+    </bean>
+
+    <bean id="skillListEmp1" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="skillJava" />
+                <ref bean="skillSpring" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="skillListEmp2" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="skillJava" />
+                <ref bean="skillReact" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Employees -->
+    <bean id="emp1" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="1" />
+        <property name="name" value="John Doe" />
+        <property name="salary" value="75000.0" />
+        <property name="permanent" value="true" />
+        <property name="dateOfBirth" value="15/05/1992" />
+        <property name="department" ref="deptIT" />
+        <property name="skillList" ref="skillListEmp1" />
+    </bean>
+
+    <bean id="emp2" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="2" />
+        <property name="name" value="Jane Smith" />
+        <property name="salary" value="82000.0" />
+        <property name="permanent" value="true" />
+        <property name="dateOfBirth" value="20/08/1995" />
+        <property name="department" ref="deptIT" />
+        <property name="skillList" ref="skillListEmp2" />
+    </bean>
+
+    <bean id="emp3" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="3" />
+        <property name="name" value="Robert Johnson" />
+        <property name="salary" value="65000.0" />
+        <property name="permanent" value="false" />
+        <property name="dateOfBirth" value="10/12/1998" />
+        <property name="department" ref="deptHR" />
+        <property name="skillList" ref="skillListEmp1" />
+    </bean>
+
+    <bean id="emp4" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="4" />
+        <property name="name" value="Emily Davis" />
+        <property name="salary" value="91000.0" />
+        <property name="permanent" value="true" />
+        <property name="dateOfBirth" value="05/03/1990" />
+        <property name="department" ref="deptHR" />
+        <property name="skillList" ref="skillListEmp2" />
+    </bean>
+
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="emp1" />
+                <ref bean="emp2" />
+                <ref bean="emp3" />
+                <ref bean="emp4" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
