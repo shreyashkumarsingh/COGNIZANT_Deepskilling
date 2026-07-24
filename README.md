@@ -12,7 +12,7 @@ COGNIZANT_Deepskilling/
 │   ├── Algorithms/
 │   └── DesignPatterns/
 ├── PL_SQL/
-├── Spring Core_Maven/
+├── Spring Core and Maven/
 │   ├── LibraryManagement/             ← Exercises 1–8 (Spring Core + AOP + XML config)
 │   └── LibraryManagement-SpringBoot/  ← Exercise 9  (Spring Boot REST API)
 └── JUnit, Mockito and SL4J/
@@ -150,7 +150,7 @@ LibraryManagement/
 
 **Run:**
 ```bash
-cd "Spring Core_Maven/LibraryManagement"
+cd "Spring Core and Maven/LibraryManagement"
 mvn compile exec:java -Dexec.mainClass="com.library.LibraryManagementApplication"
 ```
 
@@ -179,7 +179,7 @@ A standalone Spring Boot 3.x application with a full CRUD REST API backed by an 
 
 **Run:**
 ```bash
-cd "Spring Core_Maven/LibraryManagement-SpringBoot"
+cd "Spring Core and Maven/LibraryManagement-SpringBoot"
 mvn spring-boot:run
 ```
 
