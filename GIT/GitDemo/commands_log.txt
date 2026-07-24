@@ -1,0 +1,90 @@
+===================================================================
+GIT HANDS-ON LAB EXERCISES - TASK LOG & COMMAND HISTORY
+Repository: https://github.com/shreyashkumarsingh/COGNIZANT_Deepskilling
+===================================================================
+
+--- TASK 1: Environment Setup, Project Structure & First File ---
+1. Check Git version:
+   $ git --version
+   git version 2.45.2.windows.1
+
+2. Global Configuration:
+   $ git config --global user.name "Shreyash Kumar Singh"
+   $ git config --global user.email "shreyash.kumar.singh@cognizant.com"
+   $ git config --global core.editor "notepad++.exe -multiInst -notabbar -nosession -noPlugin"
+
+3. Verify Configuration:
+   $ git config --list --global
+
+4. Initialize Repository & Create Files:
+   $ cd GIT/GitDemo
+   $ git init
+   $ git status
+   $ git add welcome.txt
+   $ git commit -m "Initial commit: Add welcome.txt to GitDemo project"
+
+--- TASK 2: Git Ignore Setup ---
+1. Create .gitignore file:
+   *.log
+   log/
+   logs/
+   *.orig
+   *.bak
+
+2. Create test log files:
+   app.log
+   log/debug.log
+
+3. Verify ignored status:
+   $ git status (Confirms app.log and log/ are ignored)
+
+--- TASK 3: Branching & Merging ---
+1. Create and switch to new branch:
+   $ git checkout -b GitNewBranch
+
+2. Add new file and commit:
+   $ git add feature.txt
+   $ git commit -m "feat: Add feature.txt in GitNewBranch"
+
+3. Switch back to main and compare:
+   $ git checkout main
+   $ git diff main..GitNewBranch
+
+4. Merge branch into main:
+   $ git merge GitNewBranch
+
+5. Observe log and delete branch:
+   $ git log --oneline --graph --decorate
+   $ git branch -d GitNewBranch
+
+--- TASK 4: Conflict Resolution ---
+1. Create branch GitWork:
+   $ git checkout -b GitWork
+   $ git add hello.xml (content: <note><to>User</to><from>GitWork</from></note>)
+   $ git commit -m "feat(GitWork): Add hello.xml in GitWork branch"
+
+2. Switch to main and create conflicting file:
+   $ git checkout main
+   $ git add hello.xml (content: <note><to>User</to><from>MainBranch</from></note>)
+   $ git commit -m "feat(main): Add hello.xml in main branch"
+
+3. Induce merge conflict:
+   $ git merge GitWork
+   (CONFLICT (add/add): Merge conflict in hello.xml)
+
+4. Resolve conflict in hello.xml:
+   Updated hello.xml with unified resolved content.
+   $ git add hello.xml
+   $ git commit -m "fix(merge): Resolve merge conflict in hello.xml between main and GitWork"
+
+5. Delete branch GitWork:
+   $ git branch -d GitWork
+   $ git log --oneline --graph --decorate
+
+--- TASK 5: Push to Remote GitHub ---
+1. Audit working tree:
+   $ git status
+
+2. Push to GitHub remote:
+   $ git push origin main
+===================================================================

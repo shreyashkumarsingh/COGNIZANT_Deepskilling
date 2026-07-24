@@ -1,0 +1,2 @@
+Welcome to Git version control system!
+This is the initial text file created for GitDemo project.
