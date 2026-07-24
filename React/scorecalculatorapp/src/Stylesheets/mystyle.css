@@ -1,0 +1,18 @@
+.formatstyle {
+  color: brown;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  border: 2px solid darkcyan;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: #f9fbfd;
+}
+
+.formatstyle h1 {
+  color: darkcyan;
+  text-decoration: underline;
+}
+
+.formatstyle h2 {
+  color: #333;
+}
